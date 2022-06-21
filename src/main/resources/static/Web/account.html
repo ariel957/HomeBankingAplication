@@ -108,37 +108,28 @@
 
         <div class="container pt-4">
           <section class="mb-3">
-            <div class="card">
+            <div class="cardLinks">
               <div class="card-header text-center py-3">
-                          <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary" aria-current="page" href="#">Mis movimientos</a>  
-                    </li>  
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">mi CBU</a>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Detalles de cuenta</a>
-                    </li>
-                  </ul>
+                <h2>Mis movimientos</h2>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
  
-                  <table class="table">
-                    <thead class="table-light">
+                  <table class="table table-hover text-nowrap align-text-center">
+                    <thead class="cardLinkst">
            
-
+                    <h4></h4>    
                 <tr>
-                    <td>Transaccion Nro</td>
-                    <td>Metodo de pago</td>
-                    <td>Monto</td>
-                    <td>tipo de gasto</td>
-                    <td>fecha</td>
+                    <td><h5>Transaccion Nro</h5></td>
+                    <td><h5>Metodo de pago</h5></td>
+                    <td><h5>Monto $</h5></td>
+                    <td><h5>Tipo de pago</h5></td>
+                    <td><h5>Fecha aaaa/mm/dd</h5></td>
                     
 
                 </tr>
             </thead>
-            <tbody class="table-light">
+            <tbody class="cardLinks">
                 <tr v-for="transaction in transactions" >
                     <td>{{transaction.id}}</td>
                     <td :class="{'text-success': transaction.type == 'DEBITO', 'text-danger' : transaction.type != 'DEBITO' }">{{transaction.type}}</td>
@@ -170,16 +161,16 @@
           <section>
             <div class="row">
               <div class="col-xl-6 col-md-12 mb-4">
-                <div class="card">
-                  <div class="card-body">
+                <div class="cardLinks">
+                  <div class="Transter card-body">
                     <div class="d-flex justify-content-between p-md-1">
                       <div class="d-flex flex-row">
                         <div class="align-self-center">
                           <h2 class="h1 mb-0 me-4"></h2>
                         </div>
                         <div>
-                          <h4>Total Sales</h4>
-                          <a class="nav-link text-light fw-bold" aria-current="page" href="http://localhost:8080/web/cards.html">Tus tarjetas</a>
+                          <h4>Transferencias</h4>
+                          <a class="link nav-link fw-bold" aria-current="page" href="http://localhost:8080/web/transfers.html">Realizar una nueva transferencia</a>
                         </div>
                       </div>
                       <div class="align-self-center">
@@ -190,7 +181,7 @@
                 </div>
               </div>
               <div class="col-xl-6 col-md-12 mb-4">
-                <div class="card">
+                <div class="cardLinks">
                   <div class="card-body">
                     <div class="d-flex justify-content-between p-md-1">
                       <div class="d-flex flex-row">

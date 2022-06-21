@@ -111,8 +111,8 @@
         <div class="col-xl-12 col-md-12 mb-4">
           <div class="cardLinks mt-5">
             <div class="card-body mt-5">
-              <div class="d-flex justify-content-between p-md-1">
-                <div class="d-flex flex-row">
+              <div class=" justify-content-between p-md-1">
+                <div class=" flex-row">
                   <div class="align-self-center">
                     <h2>Mis Trajetas de Debito</h2>
                   </div>
@@ -128,7 +128,7 @@
         <div id="myAccounts">
           <div class="bodyAccounts">
             <div>
-            <div class="d-flex justify-content-between p-md-4">
+            <div class=" justify-content-between p-md-4">
               <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4b8xfsqj.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px;"  loop  autoplay></lottie-player>
             </div>
         
@@ -139,10 +139,10 @@
       <div class="col-xl-6 col-md-12 mb-4">
         <div class=" m-4" >
           <div id="accounts" class="card-body ">
-            <div class="d-flex justify-content-between p-md-1">
+            <div class="justify-content-between p-md-1">
               <div class="m-5 hover-shadow ">
                 <div v-if="cards.length != 0 ">
-                  <div class="d-flex justify-content-evenly">
+                  <div class=" justify-content-evenly">
               <div class="card1" v-for="card in cards.filter(cardD=> cardD.type == 'DEBITO')" id="card">
                 <div >
                     <div class="card__front card__part" :class="{'titanium': card.color == 'TITANIUM', 'gold': card.color === 'GOLD','silver' : card.color === 'SILVER' }">
@@ -192,7 +192,7 @@
           <div class="col-xl-12 col-md-12 mb-4">
             <div class="cardLinks">
               <div class="card-body">
-                <div class="d-flex justify-content-between p-md-1">
+                <div class=" justify-content-between p-md-1">
                   <div class="d-flex flex-row">
                     <div class="align-self-center">
                       <h2>Mis Trajetas de Credito</h1>
@@ -209,7 +209,7 @@
           <div id="myAccounts">
             <div class="bodyAccounts">
               <div>
-              <div class="d-flex justify-content-between p-md-4">
+              <div class="justify-content-between p-md-4">
                 <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4b8xfsqj.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px;"  loop  autoplay></lottie-player>
               </div>
           
@@ -220,10 +220,10 @@
         <div class="col-xl-6 col-md-12 mb-4" >
           <div class=" m-4"  v-if="cards.length != 0 ">
             <div id="accounts" class=" card-body m-2 " v-for="card in cards.filter(cardD=> cardD.type == 'CREDITO')" id="card">
-              <div class="d-flex justify-content-between p-md-1">
+              <div class=" justify-content-between p-md-1">
                 <div class="justify-center" >
                   <div>
-                    <div class="d-flex justify-content-evenly ">
+                    <div class=" justify-content-evenly ">
                 <div class="card1" >
                   <div>
                       <div class="card__front card__part align-items-center" :class="{'titanium': card.color == 'TITANIUM', 'gold': card.color === 'GOLD','silver' : card.color === 'SILVER' }">

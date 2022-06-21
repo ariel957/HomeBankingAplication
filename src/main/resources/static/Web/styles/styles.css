@@ -5,6 +5,7 @@
 	animation: gradient 15s ease infinite;
 	height: 100vh;
   opacity: 95%;
+  max-width: 100%;
 }
 .main{
   margin-top: 58px;
@@ -32,7 +33,7 @@
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
   width: 200px;
   z-index: 600;
-  opacity: 80%;
+  
   border-radius: 8px;
 
 }
@@ -49,6 +50,19 @@
 #myAccounts{
 background-position: center;
 
+}
+.tableEdit{
+  background-color: transparent;
+}
+.Transter{
+  margin-top: 0.2rem;
+  background-color: #82e6ff;
+  height: 7.2rem ;
+  justify-content: center;
+  border-radius: 8px;
+}
+.link{
+  color: #46117ab2;
 }
 
 .celular{
@@ -80,11 +94,20 @@ background: transparent;
 
   border-radius: 8px;
   box-shadow: 0 0 40px -10px rgb(68, 2, 57);
-  background-color: #c3fff177;
+  background-color: #ffffff77;
 
 }
 
+.cardTransfer {
+  margin-top: 8rem;
+  height:20rem;
+  justify-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px rgb(68, 2, 57);
+  background-color: #ffd6d677;
 
+
+}
 
 /*TCards cuentas///////////////////////////*/
 

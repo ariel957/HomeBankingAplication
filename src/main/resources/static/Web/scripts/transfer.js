@@ -6,7 +6,7 @@ Vue.createApp({
             cuentaOrigen:"",
             description:"",
             amount:"",
-         
+            loans:[]
         }
     },
     created() {
@@ -14,6 +14,7 @@ Vue.createApp({
         axios.get('http://localhost:8080/api/clients/current')
             .then(datos => {
                 this.accounts = datos.data.accounts
+                this.loans = datos.data.loans
                 
                
             })
