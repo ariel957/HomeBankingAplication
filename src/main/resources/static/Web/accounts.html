@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="./styles/mdb.min.css" />
+  <title>Mi cuenta</title>
+</head>
+  
+<body class="body">
+  <div id="app">
+    
+    <header>
+      <!-- Sidebar -->
+      <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+          <div class="list-group list-group-flush mx-3 mt-4">
+            <a href="http://localhost:8080/web/accounts.html" class="list-group-item list-group-item-action py-2" aria-current="true">
+              <i class="fas fa-home me-3"></i> <span>Inicio </span>
+            </a>
+            <a href="http://localhost:8080/web/cards.html" class="list-group-item list-group-item-action py-3">
+              <i class="fas fa-arrow-down me-3"></i><span>Mis tarjetas</span></a>
+              <a href="http://localhost:8080/web/transfers.html" class="list-group-item list-group-item-action py-3">
+                <i class="fas fa-heart me-3"></i><span>Realizar una transferencia</span></a>
+            <a href="#" class="list-group-item list-group-item-action py-3">
+              <i class="fas fa-donate me-3"></i><span>Recargas</span></a>
+            <a href="http://localhost:8080/web/create-cards.html" class="list-group-item list-group-item-action py-3">
+              <i class="fas fa-heart me-3"></i><span>Solicitar tarjeta</span></a>
+ 
+
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+  
+      <!-- Navbar -->
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+  
+         
+          <a class="navbar-brand ml-3" href="#">
+            
+    
+          </a>
+          
+          <form class="d-none d-md-flex input-group w-auto my-auto">
+            <lottie-player id="logo" class="ml-5" src="https://assets9.lottiefiles.com/private_files/lf30_trryw4ll.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player>
+            </svg>
+          </form>
+  
+         
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            
+            <li class="nav-item dropdown">
+              
+              <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Bienvenido!! queremos...</a></li>
+                
+              </ul>
+            </li>
+  
+           
+            <li class="nav-item">
+              <a class="nav-link me-3 me-lg-0" href="#">
+                <i class="fas fa-fill-drip"></i>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" v-on:click.prevent="logout()">
+                <li><a class="dropdown-item">Salir</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    
+      </nav>
+
+    </header>
+    <main class="main">
+      <div class="container pt-4">
+        <!-- Section: Mis Cuentas-->
+        <section>
+          <div>
+            <div>
+              <div class="col-xl-12 col-md-12 mb-4">
+                <div class="cardLinks">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between p-md-1">
+                      <div class="d-flex flex-row">
+                        <div class="align-self-center">
+                          <h1>Mis Cuentas</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div  class="col-xl-4 col-md-12 mb-4">
+              <div id="myAccounts">
+                <div class="bodyAccounts">
+                  <div>
+                  <div class="d-flex justify-content-between p-md-4">
+                    <lottie-player class="celular" src="https://assets3.lottiefiles.com/packages/lf20_vo0zbstd.json"  background="transparent"  speed="1"   hover loop  autoplay></lottie-player>
+                  </div>
+              
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-8 col-md-12 mb-4">
+              <div class="cardLinks m-4" v-for="account in accounts">
+                <div id="accounts" class="card-body ">
+                  <div class="d-flex justify-content-between p-md-1">
+                    <div class="d-flex flex-row">
+                      <div class="align-self-center">
+                        <i class="far fa-comment-alt text-warning fa-3x me-4"></i>
+                      </div>
+                      <div>
+                        <h4>Monto Total</h4>
+                        <h3 class="h1 mb-0 me-4">{{account.balance}}$</h3>
+                      </div>
+                    </div>
+                    <div class="align-self-center">
+                      <p class="mb-0">{{account.creationDate.substring(0,10)}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="col-xl-12 col-md-12 mb-4">
+              <div class="cardLinks">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between p-md-1">
+                    <div class="d-flex flex-row">
+                      <div class="align-self-center">
+                        <h1>Mis Prestamos</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xl-6 col-md-12 mb-4">
+              <div class="cardLinks">
+                <div id="myLoans" class="card-body">
+                  <div class="d-flex justify-content-between p-md-1">
+                    <div class="table-responsive">
+                      <div v-if="loans.length != 0">
+                      <table class="table table-hover text-nowrap align-text-center">
+                          <thead>
+                            <tr>
+                              <th>Tipo de prestamo </th>
+                              <th>Monto</th>
+                              <th>Cantidad de cuotas</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr  v-for="loan in loans">
+                              <td>{{loan.name}}</td>
+                              <td>${{loan.amount}}</td>
+                              <td>{{loan.payments}}</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                          <div class="cardLinks" v-else>
+                            <div class="card-header text-center py-3">
+                              <h5 class="mb-0 text-center">
+                                <strong>No tienes prestamos activos</strong>
+                              </h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="align-self-center">
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-xl-6 col-md-12 ">
+              <div class="cardLinks ">
+                <div id="newLoan" class="card-body">
+                  <div class="d-flex justify-content-between ">
+                    <div class="d-flex flex-row">
+                      <div class="align-self-center">
+                        <h2 class="h1 mb-0 me-4"></h2>
+                      </div>
+                      <div>
+                        <h4>Solicitar un Nuevo prestamo</h4>
+                        <p class="mb-0">Encontrá tu mejor opción para adquirir el Préstamo adecuado para vos, con pocos requisitos. En pocos pasos descubrí las difrentes opciones y elegí la más adecuada.</p>
+                        <a href="http://localhost:8080/web/loan-aplication.html" class="pt-3 ">
+                          <i class="fas fa-heart me-3"></i><span>Quiero saber mas!!</span></a>
+                      </div>
+                    </div>
+                    <div class="align-self-center">
+                      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_pfhcg82a.json" background="transparent"
+                      speed="1" style="width: 150px; height: 150px;" hover loop autoplay></lottie-player>
+                    </div>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </section>
+        <!--Section: Minimal statistics cards-->
+        <section>
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="cardLinks">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between px-md-1">
+                    <div class="align-self-center">
+                      <i class="far fa-comment-alt text-warning fa-3x"></i>
+                    </div>
+                    <div class="text-end">
+                      <h3>Solicitar nueva tarjeta</h3>
+                      <p class="mb-0">Mis tarjetas</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="cardLinks">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between px-md-1">
+                    <div class="align-self-center">
+                      <i class="far fa-comment-alt text-warning fa-3x"></i>
+                    </div>
+                    <div class="text-end">
+                      <h3>Realizar Una transferencia</h3>
+                      <p class="mb-0">Transferencias</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="cardLinks">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between px-md-1">
+                    <div class="align-self-center">
+                      <i class="fas fa-chart-line text-success fa-3x"></i>
+                    </div>
+                    <div class="text-end">
+                      <h3>Solicitar un nuevo prestamos</h3>
+                      <p class="mb-0">Prestamos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="cardLinks">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between px-md-1">
+                    <div class="align-self-center">
+                      <i class="fas fa-map-marker-alt text-danger fa-3x"></i>
+                    </div>
+                    <div class="text-end">
+                      <h3>Realizar una transferencia</h3>
+                      <p class="mb-0">Transferencias</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+    
+</main>
+</div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="./scripts/accounts.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</body>

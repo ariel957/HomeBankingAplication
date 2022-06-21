@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="./styles/styles.css" /> <link rel="stylesheet" href="./styles/styles.css">  
+     
+
+<title>Mis tarjetas</title>
+</head>
+
+<body class="body">
+  <div id="app">
+    
+    <header>
+      <!-- Sidebar -->
+      <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+          <div class="list-group list-group-flush mx-3 mt-4">
+            <a href="http://localhost:8080/web/accounts.html" class="list-group-item list-group-item-action py-2" aria-current="true">
+              <i class="fas fa-home me-3"></i> <span>Inicio </span>
+            </a>
+            <a href="http://localhost:8080/web/cards.html" class="list-group-item list-group-item-action py-3">
+              <i class="fas fa-arrow-down me-3"></i><span>Mis tarjetas</span></a>
+              <a href="http://localhost:8080/web/transfers.html" class="list-group-item list-group-item-action py-3">
+                <i class="fas fa-heart me-3"></i><span>Realizar una transferencia</span></a>
+            <a href="#" class="list-group-item list-group-item-action py-3">
+              <i class="fas fa-donate me-3"></i><span>Recargas</span></a>
+            <a href="http://localhost:8080/web/create-cards.html" class="list-group-item list-group-item-action py-3">
+              <i class="fas fa-heart me-3"></i><span>Solicitar tarjeta</span></a>
+ 
+
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+  
+      <!-- Navbar -->
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+  
+         
+          <a class="navbar-brand ml-3" href="#">
+            
+    
+          </a>
+          
+          <form class="d-none d-md-flex input-group w-auto my-auto">
+            <lottie-player id="logo" class="ml-5" src="https://assets9.lottiefiles.com/private_files/lf30_trryw4ll.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player>
+            </svg>
+          </form>
+  
+         
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            
+            <li class="nav-item dropdown">
+              
+              <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Bienvenido!! queremos...</a></li>
+                
+              </ul>
+            </li>
+  
+           
+            <li class="nav-item">
+              <a class="nav-link me-3 me-lg-0" href="#">
+                <i class="fas fa-fill-drip"></i>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" v-on:click.prevent="logout()">
+                <li><a class="dropdown-item">Salir</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    
+      </nav>
+
+    </header>
+<main>
+
+  <section>
+    <div>
+      <div>
+        <div class="col-xl-12 col-md-12 mb-4">
+          <div class="cardLinks mt-5">
+            <div class="card-body mt-5">
+              <div class="d-flex justify-content-between p-md-1">
+                <div class="d-flex flex-row">
+                  <div class="align-self-center">
+                    <h2>Mis Trajetas de Debito</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div  class="col-xl-6 col-md-12 mb-4">
+        <div id="myAccounts">
+          <div class="bodyAccounts">
+            <div>
+            <div class="d-flex justify-content-between p-md-4">
+              <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4b8xfsqj.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px;"  loop  autoplay></lottie-player>
+            </div>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 mb-4">
+        <div class=" m-4" >
+          <div id="accounts" class="card-body ">
+            <div class="d-flex justify-content-between p-md-1">
+              <div class="m-5 hover-shadow ">
+                <div v-if="cards.length != 0 ">
+                  <div class="d-flex justify-content-evenly">
+              <div class="card1" v-for="card in cards.filter(cardD=> cardD.type == 'DEBITO')" id="card">
+                <div >
+                    <div class="card__front card__part" :class="{'titanium': card.color == 'TITANIUM', 'gold': card.color === 'GOLD','silver' : card.color === 'SILVER' }">
+                      <img class="card__front-square card__square" src="">
+                      <img class="card__front-logo card__logo"><p>{{card.color}}</p>
+                      <p class="card_numer">{{card.number}}</p>
+                      <div class="card__space-75">
+                        <span class="card__label">Titular</span>
+                        <p class="card__info">{{card.cardHolder}}</p>
+                      </div>
+                      <div class="card__space-25">
+                        <span class="card__label">Expires</span>
+                              <p class="card__info">{{formatoFecha(card.thruDate)}}</p>
+                      </div>
+                    </div>
+                    
+                    <div class="card__back card__part"  :class="{'titanium': card.color == 'TITANIUM', 'gold': card.color === 'GOLD','silver' : card.color === 'SILVER' }">
+                      <div class="card__black-line"></div>
+                      <div class="card__back-content">
+                        <div class="card__secret">
+                          <p class="card__secret--last">{{card.cvv}}</p>
+                        </div>
+                        <img class="card__back-square card__square" src="">
+                        <img class="card__back-logo card__logo" src="">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+                </div>
+                <div v-else>
+                  
+                  <div class="alert alert-primary" role="alert">
+                    No tienes tarjetas activas
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="col-xl-12 col-md-12 mb-4">
+            <div class="cardLinks">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <h2>Mis Trajetas de Credito</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div  class="col-xl-6 col-md-12 mb-4">
+          <div id="myAccounts">
+            <div class="bodyAccounts">
+              <div>
+              <div class="d-flex justify-content-between p-md-4">
+                <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4b8xfsqj.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px;"  loop  autoplay></lottie-player>
+              </div>
+          
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-md-12 mb-4" >
+          <div class=" m-4"  v-if="cards.length != 0 ">
+            <div id="accounts" class=" card-body m-2 " v-for="card in cards.filter(cardD=> cardD.type == 'CREDITO')" id="card">
+              <div class="d-flex justify-content-between p-md-1">
+                <div class="justify-center" >
+                  <div>
+                    <div class="d-flex justify-content-evenly ">
+                <div class="card1" >
+                  <div>
+                      <div class="card__front card__part align-items-center" :class="{'titanium': card.color == 'TITANIUM', 'gold': card.color === 'GOLD','silver' : card.color === 'SILVER' }">
+                        <img class="card__front-square card__square" src="">
+                        <img class="card__front-logo card__logo"><p>{{card.color}}</p>
+                        <p class="card_numer">{{card.number}}</p>
+                        <div class="card__space-75">
+                          <span class="card__label">Titular</span>
+                          <p class="card__info">{{card.cardHolder}}</p>
+                        </div>
+                        <div class="card__space-25">
+                          <span class="card__label">Expires</span>
+                                <p class="card__info">{{formatoFecha(card.thruDate)}}</p>
+                        </div>
+                      </div>
+                      
+                      <div class="card__back card__part"  :class="{'titanium': card.color == 'TITANIUM', 'gold': card.color === 'GOLD','silver' : card.color === 'SILVER' }">
+                        <div class="card__black-line"></div>
+                        <div class="card__back-content">
+                          <div class="card__secret">
+                            <p class="card__secret--last">{{card.cvv}}</p>
+                          </div>
+                          <img class="card__back-square card__square" src="">
+                          <img class="card__back-logo card__logo" src="">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else>
+          <div>
+            
+            <div class="alert alert-primary" role="alert">
+              No tienes tarjetas activas
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div>
+  </section>
+
+
+
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="./scripts/cards.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
