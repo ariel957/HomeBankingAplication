@@ -29,13 +29,9 @@ Vue.createApp({
 
             return fecha[1] + "/" +fecha[0]
         },
-        expired(){
-            getDate > this.cards.thruDate.getDate()
-        }
-        
-
-
-    },
-
+        logout(){
+            axios.post('/api/logout').then(response =>  window.location.href="http://localhost:8080/web/index.html") 
+        },
+    }
 
 }).mount('#app')

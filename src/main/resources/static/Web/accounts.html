@@ -21,21 +21,19 @@
       <!-- Sidebar -->
       <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
         <div class="position-sticky">
-          <div class="list-group list-group-flush mx-3 mt-4">
-            <a href="http://localhost:8080/web/accounts.html" class="list-group-item list-group-item-action py-2"
-              aria-current="true">
-              <i class="fas fa-home me-3"></i> <span>Inicio </span>
-            </a>
-            <a href="http://localhost:8080/web/cards.html" class="list-group-item list-group-item-action py-3">
-              <i class="fas fa-arrow-down me-3"></i><span>Mis tarjetas</span></a>
-            <a href="http://localhost:8080/web/transfers.html" class="list-group-item list-group-item-action py-3">
-              <i class="fas fa-heart me-3"></i><span>Realizar una transferencia</span></a>
-            <a href="#" class="list-group-item list-group-item-action py-3">
-              <i class="fas fa-donate me-3"></i><span>Recargas</span></a>
-            <a href="http://localhost:8080/web/create-cards.html" class="list-group-item list-group-item-action py-3">
-              <i class="fas fa-heart me-3"></i><span>Solicitar tarjeta</span></a>
-
-
+          <div class="list-group list-group-flush mx-3 mt-5">
+            <a href="#" class="list-group-item list-group-item-action py-4"aria-current="true">
+              <i class="fas fa-home me-3"></i> <span>Inicio </span></a>
+            <a href="http://localhost:8080/web/cards.html" class="list-group-item list-group-item-action py-4">
+              <i class="fab fa-cc-mastercard me-3"></i><span>Mis tarjetas</span></a>
+            <a href="http://localhost:8080/web/transfers.html" class="list-group-item list-group-item-action py-4">
+              <i class="fas fa-exchange-alt me-3"></i><span>Realizar una transferencia</span></a>
+            <a href="http://localhost:8080/web/loan-application.html" class="list-group-item list-group-item-action py-4">
+              <i class="fas fa-donate me-3"></i><span>Solicitar un prestamo</span></a>
+            <a href="http://localhost:8080/web/create-cards.html" class="list-group-item list-group-item-action py-4">
+              <i class="fas fa-credit-card me-3"></i><span>Solicitar tarjeta</span></a>
+            <a href="#"  v-on:click.prevent="logout()" class="list-group-item list-group-item-action py-4">
+              <i class="fas fa-door-closed me-3"></i><span>Cerrar Sesion</span></a>
           </div>
         </div>
       </nav>
@@ -62,8 +60,9 @@
               background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>
             </svg>
           </form>
-
-
+          <div class="ms-2">
+            <h3>bienvenido {{clients.firstName}} {{clients.lastName}}!!</h3>
+          </div>
           <ul class="navbar-nav ms-auto d-flex flex-row">
 
             <li class="nav-item dropdown">
@@ -74,19 +73,12 @@
                 <span class="badge rounded-pill badge-notification bg-danger">1</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Bienvenido!! queremos...</a></li>
+                <li><a class="dropdown-item" href="#">Bienvenido !!</a></li>
 
               </ul>
             </li>
 
-
-            <li class="nav-item">
-              <a class="nav-link me-3 me-lg-0" href="#">
-                <i class="fas fa-fill-drip"></i>
-              </a>
-            </li>
-
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown me-5">
               <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
                 id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -96,7 +88,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"
                 v-on:click.prevent="logout()">
-                <li><a class="dropdown-item">Salir</a></li>
+                <li><a class="dropdown-item">Cerrar sesion</a></li>
               </ul>
             </li>
           </ul>

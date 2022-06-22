@@ -1,9 +1,15 @@
 
 .body {
-	background: linear-gradient(-45deg, #fcaf97, #f0cffdd7, #afe8fd, #23d5ab);
+	background: linear-gradient(-45deg, #fcaf97, #71448579, #3e0cf3a4, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+  opacity: 95%;
+  max-width: 100%;
+}
+.bodyIndex{
+  background: linear-gradient(-45deg, #fcaf97, #f2d3ff79, #bfadffa4, #3fffd2);
+  height: 100vh;
   opacity: 95%;
   max-width: 100%;
 }
@@ -33,13 +39,22 @@
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
   width: 200px;
   z-index: 600;
+  background-color: #9300cd41!important;
   
   border-radius: 8px;
-
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #000000;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solidsolidrgba(0,0,0,.125);
 }
 #main-navbar{
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-  background: linear-gradient(-45deg, #e8c1ff, #68d8ecd7, #77e8f7, #ffffff);
+  background-color :#e1fff896 !important;
   border-radius: 8px;
   box-shadow: 0 0 40px -10px rgb(68, 2, 57);
 }
@@ -56,7 +71,7 @@ background-position: center;
 }
 .Transter{
   margin-top: 0.2rem;
-  background-color: #82e6ff;
+  background-color: #d4f4fc;
   height: 7.2rem ;
   justify-content: center;
   border-radius: 8px;
@@ -77,7 +92,7 @@ background: transparent;
   background-color: #ac7aec;
 }
 #newLoan{
-  background-color: #82e6ff;
+  background-color: #c7f4ff;
   height: 217px ;
   justify-content: center;
   
@@ -94,7 +109,7 @@ background: transparent;
 
   border-radius: 8px;
   box-shadow: 0 0 40px -10px rgb(68, 2, 57);
-  background-color: #ffffff77;
+  background-color: #fff6f6c7;
 
 }
 
@@ -108,7 +123,16 @@ background: transparent;
 
 
 }
+.cardTransfers {
+  width: 35rem;
+  height:35rem;
+  justify-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px rgb(68, 2, 57);
+  background-color: #ffd6d677;
 
+
+}
 /*TCards cuentas///////////////////////////*/
 
 .card {
@@ -136,7 +160,7 @@ background: transparent;
 #login{
   background-image: linear-gradient(120deg, #6018d463 0%, #70019c7e 100%);
   backdrop-filter: blur(7px);
-  border-radius: 5px; (8, 115, 255, 0.5), inset 0px -12px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(244, 158, 255);
+  border-radius: 5px, (8, 115, 255, 0.5), inset 0px -12px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(244, 158, 255);
 }
 .btn-primary {
   color: #fff;
